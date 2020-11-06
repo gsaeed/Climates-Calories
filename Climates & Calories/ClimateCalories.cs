@@ -179,17 +179,17 @@ namespace ClimatesCalories
             mod.SaveDataInterface = instance;
 
             StartGameBehaviour.OnStartGame += ClimatesCalories_OnStartGame;
-            EntityEffectBroker.OnNewMagicRound += ClimatesCaloriesEffects_OnNewMagicRound;
-            EntityEffectBroker.OnNewMagicRound += Hunger.FoodEffects_OnNewMagicRound;
+            //EntityEffectBroker.OnNewMagicRound += ClimatesCaloriesEffects_OnNewMagicRound;
+            //EntityEffectBroker.OnNewMagicRound += Hunger.FoodEffects_OnNewMagicRound;
             EntityEffectBroker.OnNewMagicRound += Camping.OnNewMagicRound_PlaceCamp;
             PlayerEnterExit.OnTransitionInterior += Camping.Destroy_OnTransition;
             PlayerEnterExit.OnTransitionExterior += Camping.Destroy_OnTransition;
             PlayerEnterExit.OnTransitionDungeonInterior += Camping.Destroy_OnTransition;
             PlayerEnterExit.OnTransitionDungeonExterior += Camping.Destroy_OnTransition;
             //PlayerEnterExit.OnPreTransition += TavernText_OnPreTransition;
-            playerEntity.OnExhausted += PassedOut_OnExhausted;
+            //playerEntity.OnExhausted += PassedOut_OnExhausted;
 
-            GameManager.Instance.RegisterPreventRestCondition(() => { return TooExtremeToRest(); }, "The temperature is too extreme to rest.");
+            //GameManager.Instance.RegisterPreventRestCondition(() => { return TooExtremeToRest(); }, "The temperature is too extreme to rest.");
             UIWindowFactory.RegisterCustomUIWindow(UIWindowType.Tavern, typeof(TavernWindow));
 
             ItemHelper itemHelper = DaggerfallUnity.Instance.ItemHelper;
@@ -569,7 +569,7 @@ namespace ClimatesCalories
                 {
                     if (camping)
                     {
-                        if (Dice100.SuccessRoll(playerEntity.Stats.LiveLuck + 20))
+                        if (Dice100.SuccessRoll(playerEntity.Stats.LiveLuck + 40))
                             noSpawns = true;
                     }
                     txtCount = txtIntervals;
