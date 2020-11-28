@@ -125,6 +125,7 @@ namespace ClimatesCalories
         public static void RestOrPackFire(RaycastHit hit)
         {
             DaggerfallMessageBox campPopUp = new DaggerfallMessageBox(DaggerfallUI.UIManager, DaggerfallUI.UIManager.TopWindow);
+            IUserInterfaceManager uiManager = DaggerfallUI.UIManager;
             if (Fire != null)
             {
                 if (hit.transform.gameObject.GetInstanceID() == Fire.GetInstanceID())
@@ -139,13 +140,13 @@ namespace ClimatesCalories
                 else
                 {
                     ClimateCalories.camping = true;
-                    DaggerfallUI.PostMessage(DaggerfallUIMessages.dfuiOpenRestWindow);
+                    uiManager.PushWindow(new DaggerfallRestWindow(uiManager, true));
                 }
             }
             else
             {
                 ClimateCalories.camping = true;
-                DaggerfallUI.PostMessage(DaggerfallUIMessages.dfuiOpenRestWindow);
+                uiManager.PushWindow(new DaggerfallRestWindow(uiManager, true));
             }
         }
 
