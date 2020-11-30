@@ -37,7 +37,8 @@
         "Assets/Game/Mods/Climates-Calories/Materials/50_7-0.mat",
         "Assets/Game/Mods/Climates-Calories/Models/blb_tent.fbx",
         "Assets/Game/Mods/Climates-Calories/Models/41606.prefab",
-        "Assets/Game/Mods/Climates-Calories/Climates & Calories.dfmod.json"
+        "Assets/Game/Mods/Climates-Calories/Climates & Calories.dfmod.json",
+        "Assets/Game/Mods/Climates-Calories/Textures/RALZARTAVERN.png"
     ],
     "Dependencies": [
         {
