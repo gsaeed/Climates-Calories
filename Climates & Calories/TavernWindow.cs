@@ -24,10 +24,10 @@ namespace ClimatesCalories
         #region UI Rects
 
         Rect roomButtonRect = new Rect(5, 5, 120, 7);
-        Rect talkButtonRect = new Rect(5, 14, 120, 7);
-        Rect foodButtonRect = new Rect(5, 23, 120, 7);
-        Rect drinksButtonRect = new Rect(5, 32, 120, 7);
-        Rect exitButtonRect = new Rect(5, 41, 120, 7);
+        Rect talkButtonRect = new Rect(5, 13, 120, 7);
+        Rect foodButtonRect = new Rect(5, 21, 120, 7);
+        Rect drinksButtonRect = new Rect(5, 29, 120, 7);
+        Rect exitButtonRect = new Rect(5, 38, 120, 14);
 
         #endregion
 

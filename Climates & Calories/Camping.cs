@@ -141,13 +141,17 @@ namespace ClimatesCalories
                 else
                 {
                     ClimateCalories.camping = true;
-                    uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                    //uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                    uiManager.PushWindow(UIWindowFactory.GetInstanceWithArgs(UIWindowType.Rest, new object[] { uiManager, false }));
+
                 }
             }
             else
             {
                 ClimateCalories.camping = true;
-                uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                //uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                uiManager.PushWindow(UIWindowFactory.GetInstanceWithArgs(UIWindowType.Rest, new object[] { uiManager, false }));
+
             }
         }
 
@@ -158,7 +162,9 @@ namespace ClimatesCalories
                 sender.CloseWindow();
                 IUserInterfaceManager uiManager = DaggerfallUI.UIManager;
                 ClimateCalories.camping = true;
-                uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                //uiManager.PushWindow(new DaggerfallRestWindow(uiManager, 1, true));
+                uiManager.PushWindow(UIWindowFactory.GetInstanceWithArgs(UIWindowType.Rest, new object[] { uiManager, false }));
+
             }
             else
             {
